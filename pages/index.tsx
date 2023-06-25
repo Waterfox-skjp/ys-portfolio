@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from "next/link";
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.scss'
 import { type } from 'os';
 import { client } from "../libs/client";
 import type { Works, Category } from "../types/works";    // srcから見た絶対パスで指定
