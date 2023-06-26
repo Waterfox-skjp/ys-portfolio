@@ -5,6 +5,7 @@ import styles from '../styles/Home.module.scss'
 import { type } from 'os';
 import { client } from "../libs/client";
 import type { Works, Category } from "../types/works";    // srcから見た絶対パスで指定
+import WorksList from '../components/worksList';
 
 // microCMSへAPIリクエスト
 export const getStaticProps = async () => {
@@ -14,7 +15,7 @@ export const getStaticProps = async () => {
   return {
     props: {
       works: works.contents,
-      categories: categories.contents,
+      category: categories.contents,
     },
   };
 };
@@ -24,7 +25,6 @@ type Props = {
   works: Works[];
   category: Category[];
 };
-
 
 export default function Home({
   works,
@@ -80,15 +80,9 @@ export default function Home({
           </a>
         </div>
 
-        <ul>
-          {works.map((work) => (
-            <li key={work.id}>
-              <Link href={`/works/${work.id}`}>
-                {work.title}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <div className="l-inner-wrap">
+          <WorksList works={works} category={category}/>
+        </div>
 
         <footer className={styles.footer}>
           <a

@@ -1,0 +1,59 @@
+@use './foundation/reset';
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
+
+.l-inner-wrap {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+.p-works {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(372px, 1fr));
+    gap: 40px 40px;
+  }
+
+  &__item {
+    aspect-ratio: 300 / 100; // あとでけす
+
+    &-link {
+      display: block;
+    }
+
+    &-thumb {}
+
+    &-img {
+      width: 100%;
+    }
+
+    &-title {
+      letter-spacing: .1em;
+    }
+  }
+}
