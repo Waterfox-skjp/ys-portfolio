@@ -1,16 +1,17 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Link from "next/link";
+import Link from "next/link"
 import styles from '../styles/Home.module.scss'
-import { type } from 'os';
-import { client } from "../libs/client";
-import type { Works, Category } from "../types/works";    // srcから見た絶対パスで指定
-import WorksList from '../components/worksList';
+import { type } from 'os'
+import { client } from '../libs/client'
+import type { Works, Category } from '../types/works'
+import SkillList from '../components/skillsList'
+import WorksList from '../components/worksList'
 
 // microCMSへAPIリクエスト
 export const getStaticProps = async () => {
-  const works = await client.get({ endpoint: "works" });
-  const categories = await client.get({ endpoint: "categories" });
+  const works = await client.get({ endpoint: "works" })
+  const categories = await client.get({ endpoint: "categories" })
 
   return {
     props: {
@@ -80,9 +81,16 @@ export default function Home({
           </a>
         </div>
 
-        <div className="l-inner-wrap">
-          <WorksList works={works} category={category}/>
-        </div>
+        <section className="p-skills">
+          <div className="l-inner-wrap">
+            <SkillList />
+          </div>
+        </section>
+        <section className="p-works">
+          <div className="l-inner-wrap">
+            <WorksList works={works} category={category} />
+          </div>
+        </section>
 
         <footer className={styles.footer}>
           <a

@@ -6,14 +6,26 @@ export type Works = {
   revisedAt: string;
   title: string;
   content: string;
-  eyecatch: Eyecatch[];
-  category: Category[];
+  eyecatch: {
+    url: string;
+    width: number;
+    height: number;
+  };
+  category: {
+    id: string;
+    createdAt: string;
+    updatedAt: string;
+    publishedAt: string;
+    revisedAt: string;
+    name: string;
+    slug: string;
+  };
 };
 
 export type Eyecatch = {
   url: string;
-  height: Number;
-  width: Number;
+  width: number;
+  height: number;
 };
 
 export type Category = {

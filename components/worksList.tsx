@@ -1,7 +1,7 @@
-import React, { useRef, useEffect, useState } from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import type { Works, Category } from '../types/works';    // srcから見た絶対パスで指定
+import React, { useRef, useEffect, useState } from 'react'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
+import type { Works, Category } from '../types/works'   // srcから見た絶対パスで指定
 
 type Props = {
   works: Works[];
