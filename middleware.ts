@@ -12,7 +12,7 @@ export function middleware(req: NextRequest) {
       if (user === 'Recruiter' && pwd === process.env.RECRUITER_PW) {
         return NextResponse.next();
       } else if (user === 'Owner' && pwd === process.env.OWNER_PW) {
-
+        return NextResponse.next();
       }
     }
     url.pathname = '/api/auth';
