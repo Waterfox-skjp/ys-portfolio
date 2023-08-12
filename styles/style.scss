@@ -1,21 +1,16 @@
-@use './foundation/reset';
+@use "./foundation/reset";
+@use "./layout/base";
+@use "./layout/header";
+@use "./layout/footer";
 
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@use "./component/heading";
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@use "./project/home";
 
-* {
-  box-sizing: border-box;
-}
+// a {
+//   color: inherit;
+//   text-decoration: none;
+// }
 
 // @media (prefers-color-scheme: dark) {
 //   html {
@@ -26,48 +21,3 @@ a {
 //     background: black;
 //   }
 // }
-
-.l-inner-wrap {
-  margin: 0 auto;
-  width: 1200px;
-}
-
-.p-skills {
-  &__list {
-    margin: 0 auto;
-    width: 830px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 20px 20px;
-  }
-  &__item {
-    aspect-ratio: 1 / 1;
-    background: #fff;
-  }
-}
-
-.p-works {
-  &__list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(372px, 1fr));
-    gap: 40px 40px;
-  }
-
-  &__item {
-    aspect-ratio: 300 / 100; // あとでけす
-
-    &-link {
-      display: block;
-    }
-
-    &-thumb {}
-
-    &-img {
-      width: 100%;
-    }
-
-    &-title {
-      letter-spacing: .1em;
-    }
-  }
-}

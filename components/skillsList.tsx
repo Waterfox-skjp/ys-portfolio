@@ -1,6 +1,15 @@
 import { useEffect, useState } from 'react'
-import skillData from './skill.json'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
+import skillData from './skill.json'
+
+
+type SkillItem = {
+  id: number
+  name: string
+  src: string
+  itemclass: string
+}
 
 export default function SkillList() {
   const [skill, setSkill] = useState<any>([])
@@ -11,7 +20,7 @@ export default function SkillList() {
       setSkill(skills)
       return
     }
-    const omissionSkills = skills.filter((item, index) => { return index < 10 })
+    const omissionSkills = skills.filter((item, index) => { return index < 12 })
     setSkill(omissionSkills)
   }, [allSkillFlag])
 
@@ -19,8 +28,8 @@ export default function SkillList() {
     <>
       <motion.ul className="p-skills__list">
         <AnimatePresence>
-        {skill.map((item:any) => (
-          <motion.li className="p-skills__item" key={item.id}
+          {skill.map((item: SkillItem) => (
+            <motion.li className={'p-skills__item' + item.itemclass} key={item.id}
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.5 }}
@@ -29,7 +38,8 @@ export default function SkillList() {
               ease: [0, 0.71, 0.2, 1.01]
             }}
           >
-            {item.name}
+            <div className="p-skills__item-icon"><Image src={item.src} alt="" width={87} height={87} /></div>
+            <p className="p-skills__item-name">{item.name}</p>
           </motion.li>
         ))}
         </AnimatePresence>

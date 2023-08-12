@@ -1,0 +1,20 @@
+@use "../global/" as g;
+
+html,
+body {
+  min-width: g.$content_width;
+  line-height: 1;
+  color: #111;
+  font-family: var(--font-ja-primary);
+  // scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+img { vertical-align: bottom; height: auto; }
+
+.l-inner-wrap {
+  margin: 0 auto;
+  padding: 0 80px;
+  width: 100%;
+  max-width: calc(g.$content_width + 160px);
+}

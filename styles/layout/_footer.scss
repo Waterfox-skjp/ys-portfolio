@@ -1,0 +1,5 @@
+@use "../global/" as g;
+
+.l-footer { padding: 26px 0; color: #fff; background: g.$primary_color;
+  &__copyright { font-size: 14px; text-align: center; letter-spacing: .1em; }
+}

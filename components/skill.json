@@ -3,127 +3,164 @@
       {
         "id": "0",
         "name": "HTML",
-        "src": ""
+        "src": "/images/skill/icon-html5.svg",
+        "itemclass": ""
       },
       {
         "id": "1",
         "name": "CSS",
-        "src": ""
+        "src": "/images/skill/icon-css3.svg",
+        "itemclass": ""
       },
       {
         "id": "2",
-        "name": "SASS",
-        "src": ""
+        "name": "Sass",
+        "src": "/images/skill/icon-sass.svg",
+        "itemclass": ""
       },
       {
         "id": "3",
         "name": "JavaScript",
-        "src": ""
+        "src": "/images/skill/icon-javascript.svg",
+        "itemclass": ""
       },
       {
         "id": "4",
         "name": "TypeScript",
-        "src": ""
+        "src": "/images/skill/icon-typescript.svg",
+        "itemclass": ""
       },
       {
         "id": "5",
         "name": "jQuery",
-        "src": ""
+        "src": "/images/skill/icon-jquery.svg",
+        "itemclass": ""
       },
       {
         "id": "6",
         "name": "Vue.js",
-        "src": ""
+        "src": "/images/skill/icon-vue.svg",
+        "itemclass": ""
       },
       {
         "id": "7",
         "name": "Nuxt.js",
-        "src": ""
+        "src": "/images/skill/icon-nuxtjs.svg",
+        "itemclass": ""
       },
       {
         "id": "8",
-        "name": "React.js",
-        "src": ""
+        "name": "React",
+        "src": "/images/skill/icon-react.svg",
+        "itemclass": ""
       },
       {
         "id": "9",
         "name": "Next.js",
-        "src": ""
+        "src": "/images/skill/icon-nextjs.svg",
+        "itemclass": ""
       },
       {
         "id": "10",
         "name": "Node.js",
-        "src": ""
+        "src": "/images/skill/icon-nodejs.svg",
+        "itemclass": ""
       },
       {
         "id": "11",
         "name": "PHP",
-        "src": ""
+        "src": "/images/skill/icon-php.svg",
+        "itemclass": ""
       },
       {
         "id": "12",
         "name": "WordPress",
-        "src": ""
+        "src": "/images/skill/icon-wordpress.svg",
+        "itemclass": ""
       },
       {
         "id": "13",
         "name": "Laravel",
-        "src": ""
+        "src": "/images/skill/icon-laravel.svg",
+        "itemclass": ""
       },
       {
         "id": "14",
         "name": "Google Apps Script",
-        "src": ""
+        "src": "/images/skill/icon-gas.svg",
+        "itemclass": " is-text-small"
       },
       {
         "id": "15",
         "name": "Python",
-        "src": ""
+        "src": "/images/skill/icon-python.svg",
+        "itemclass": ""
       },
       {
         "id": "16",
         "name": "Gulp",
-        "src": ""
+        "src": "/images/skill/icon-gulp.svg",
+        "itemclass": ""
       },
       {
         "id": "17",
         "name": "webpack",
-        "src": ""
+        "src": "/images/skill/icon-webpack.svg",
+        "itemclass": ""
       },
       {
         "id": "18",
         "name": "Git",
-        "src": ""
+        "src": "/images/skill/icon-git.svg",
+        "itemclass": ""
       },
       {
         "id": "19",
-        "name": "VS Code",
-        "src": ""
+        "name": "VSCode",
+        "src": "/images/skill/icon-vscode.svg",
+        "itemclass": ""
       },
       {
         "id": "20",
         "name": "Docker",
-        "src": ""
+        "src": "/images/skill/icon-docker.svg",
+        "itemclass": ""
       },
       {
         "id": "21",
-        "name": "Firebase",
-        "src": ""
+        "name": "Vagrant",
+        "src": "/images/skill/icon-vagrant.svg",
+        "itemclass": ""
       },
       {
         "id": "22",
-        "name": "Linux",
-        "src": ""
+        "name": "Firebase",
+        "src": "/images/skill/icon-firebase.png",
+        "itemclass": ""
       },
       {
         "id": "23",
-        "name": "Figma",
-        "src": ""
+        "name": "Linux",
+        "src": "/images/skill/icon-linux.png",
+        "itemclass": ""
       },
       {
         "id": "24",
+        "name": "Photoshop",
+        "src": "/images/skill/icon-photoshop.svg",
+        "itemclass": ""
+      },
+      {
+        "id": "25",
+        "name": "Figma",
+        "src": "/images/skill/icon-figma.svg",
+        "itemclass": ""
+      },
+      {
+        "id": "26",
         "name": "Backlog",
-        "src": ""
+        "src": "/images/skill/icon-backlog.svg",
+        "itemclass": ""
       }
   ]
 }
