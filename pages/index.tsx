@@ -2,19 +2,23 @@ import React, { useRef, useEffect, useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
-import * as THREE from 'three'
 import { Link as Scroll } from 'react-scroll'
 import Gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { client } from '../libs/client'
-import WAVES from 'vanta/dist/vanta.waves.min.js'
 import Header from '../components/header'
-import Footer from '../components/footer'
+import Polygon from '../components/polygon'
+import Heading from '../components/heading'
 import SkillList from '../components/skillsList'
 import WorksList from '../components/worksList'
-import Heading from '../components/heading'
-
+import Footer from '../components/footer'
 import type { Works, Category } from '../types/works'
+
+// Props（blogsとtags）の型
+type Props = {
+  works: Works[]
+  category: Category[]
+}
 
 // microCMSへAPIリクエスト
 export const getStaticProps = async () => {
@@ -35,52 +39,20 @@ Gsap.config({
   nullTargetWarn: false,
 });
 
-// Props（blogsとtags）の型
-type Props = {
-  works: Works[]
-  category: Category[]
-}
-
-export default function Home({
-  works,
-  category,
-}: Props) {
-  const [vantaEffect, setVantaEffect] = useState<any>(0)
-  const vantaRef = useRef(null)
+export default function Home({ works, category }: Props) {
   useEffect(() => {
-    if (!vantaEffect) {
-      setVantaEffect(WAVES({
-        el: vantaRef.current,
-        THREE,
-        color: 0x003775,
-        shininess: 30,
-        waveHeight: 15,
-        waveSpeed: 1,
-        zoom: 1,
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        scaleMobile: 1.00
-      }))
-    }
-
     const aniConfigPC = {
       start: 'top 80%',
       end: 'bottom 20%',
       toggleClass: 'is-animation',
       once: true
     }
-
     const aniConfigSP = {
       start: 'top 90%',
       end: 'bottom 10%',
       toggleClass: 'is-animation',
       once: true
     }
-
     ScrollTrigger.matchMedia({
       '(min-width: 751px)': function () {
         ScrollTrigger.batch('.js-fadeinup-small', aniConfigPC)
@@ -102,11 +74,7 @@ export default function Home({
         ScrollTrigger.batch('.js-fadein-experience', aniConfigSP)
       },
     });
-
-    return () => {
-      if (vantaEffect) vantaEffect.destory()
-    }
-  }, [vantaEffect])
+  })
 
   return (
     <div className="l-wrap">
@@ -115,9 +83,9 @@ export default function Home({
         <meta name="description" content="My portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header/>
+      <Header />
       <main className="l-main">
-        <div className="p-polygon-bg" ref={vantaRef}></div>
+        <Polygon />
         <section className="p-mainvisual">
           <h1 className="p-mainvisual__title">
             <span className="js-fadeinup-title"><span>Y</span><span>u</span><span>k</span><span>i</span> <span>S</span><span>u</span><span>m</span><span>i</span><span>d</span><span>a</span></span>
@@ -204,7 +172,7 @@ export default function Home({
           </Link>
         </div>
       </main>
-      <Footer/>
+      <Footer />
     </div>
   )
 }
