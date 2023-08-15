@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Link as Scroll } from 'react-scroll' // LinkコンポーネントをScrollと名前を変えて読み込んでいる理由は、next/linkのLinkと混在するため
 
 export default function Header() {
@@ -21,7 +22,9 @@ export default function Header() {
       <header className={isFixed ? 'l-header is-fixed' : 'l-header'}>
         <div className="l-header__inner">
           <div className="l-header__logo">
-            <Link href="/" className="l-header__logo-link">Su</Link>
+            <Link href="/" className="l-header__logo-link">
+              <Image src="images/logo.svg" alt="Su" width={50} height={50} />
+            </Link>
           </div>
           <nav className="l-header__nav">
             <ul className="l-header__nav-list">

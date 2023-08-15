@@ -1,0 +1,106 @@
+@keyframes fadeinUpSmall {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeinUpMiddle {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeinUpLarge {
+  from { opacity: 0; transform: translateY(80px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes mouseWheel {
+  0% {
+      transform: translate(-50%, 0);
+      opacity: 0
+    }
+
+    40% {
+      opacity: 1
+    }
+
+    80% {
+      -webkit-transform: translate(-50%, 20px);
+      transform: translate(-50%, 20px);
+      opacity: 0
+    }
+
+    100% {
+      opacity: 0
+    }
+}
+
+@keyframes smoothedArrow {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes flipinhorTop {
+  0% {
+    transform: rotateX(-90deg);
+  }
+
+  100% {
+    transform: rotateX(0);
+  }
+}
+
+@keyframes fadeinUpText {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+.js-fadeinup-small { opacity: 0; transform: translateY(20px);
+  &.is-animation { animation: fadeinUpSmall .7s ease-in-out .2s both; }
+}
+
+.js-fadeinup-middle { opacity: 0; transform: translateY(50px);
+  &.is-animation { animation: fadeinUpMiddle .7s ease-in-out .2s both; }
+}
+
+.js-fadeinup-large { opacity: 0; transform: translateY(80px);
+  &.is-animation { animation: fadeinUpMiddle .7s ease-in-out .2s both; }
+}
+
+.js-fadeinup-title { display: block; overflow: hidden;
+  span { display: inline-block; transform: translateY(100%); }
+  &.is-animation {
+    span { animation: fadeinUpText 1.2s cubic-bezier(0.7, 0.2, 0.1, 1) both;
+      @for $i from 1 through 11 {
+        &:nth-child(#{$i}) {
+          animation-delay: #{($i - 1) * 0.08s};
+        }
+      }
+    }
+  }
+}
+
+.js-fadeinup-desc { overflow: hidden;
+  span { display: inline-block; transform: translateY(100%); }
+  &.is-animation {
+    span { animation: fadeinUpText 1.2s cubic-bezier(0.7, 0.2, 0.1, 1) both;
+      @for $i from 1 through 3 {
+        &:nth-child(#{$i}) {
+          animation-delay: #{($i - 1) * 0.5 + 1s};
+        }
+      }
+    }
+  }
+}
+
+.js-fadeinup-text { overflow: hidden;
+  span { display: inline-block; transform: translateY(100%); }
+  &.is-animation {
+    span { animation: fadeinUpText 0.8s cubic-bezier(0.7, 0.2, 0.1, 1) both;
+      @for $i from 1 through 20 {
+        &:nth-child(#{$i}) {
+          animation-delay: #{($i - 1) * 0.04s};
+        }
+      }
+    }
+  }
+}

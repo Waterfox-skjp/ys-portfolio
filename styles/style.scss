@@ -4,8 +4,11 @@
 @use "./layout/footer";
 
 @use "./component/heading";
+@use "./component/button";
 
 @use "./project/home";
+
+@use "./layout/animation";
 
 // a {
 //   color: inherit;

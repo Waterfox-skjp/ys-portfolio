@@ -4,7 +4,7 @@ html,
 body {
   min-width: g.$content_width;
   line-height: 1;
-  color: #111;
+  color: g.$text_color;
   font-family: var(--font-ja-primary);
   // scroll-behavior: smooth;
   scroll-padding-top: 100px;

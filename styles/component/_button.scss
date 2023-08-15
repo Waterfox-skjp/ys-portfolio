@@ -1,0 +1,19 @@
+@use "../global/" as g;
+
+.c-button {
+  border-radius: 8px;
+  margin: 60px auto 0;
+  padding: 1em 2em;
+  display: block;
+  min-width: 200px;
+  color: #fff;
+  background: g.$primary_color;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: .1em;
+  transition: background-color .3s;
+  cursor: pointer;
+  @include g.hover() {
+    background: #2b7fde;
+  }
+}

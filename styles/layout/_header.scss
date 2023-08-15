@@ -18,14 +18,11 @@
     max-width: calc(g.$content_width + 160px);
     height: 100%;
   }
-  &__logo {
-    font-family: var(--font-en-primary);
-    font-size: 40px;
-    font-weight: 500;
-    letter-spacing: .1em;
+  &__logo { width: 50px; filter: brightness(0) invert(1); transition: filter .3s;
     &-link { color: #fff; transition: opacity .3s;
-      &:hover { opacity: .7; }
+      @include g.hover() { opacity: .7; }
     }
+    &-img { width: 100%; }
   }
   &__nav {
     &-list {
@@ -60,7 +57,7 @@
     }
   }
   &.is-fixed { background: #fff; box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .04);
-    .l-header__logo-link { color: #333; }
+    .l-header__logo { filter: none; }
     .l-header__nav-link { color: #333;
       &::after { background: g.$primary_color; }
     }

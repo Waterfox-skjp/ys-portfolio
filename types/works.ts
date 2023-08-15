@@ -6,6 +6,7 @@ export type Works = {
   revisedAt: string;
   title: string;
   content: string;
+  site_type: string;
   eyecatch: {
     url: string;
     width: number;

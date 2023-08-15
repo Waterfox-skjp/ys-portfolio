@@ -1,19 +1,18 @@
 import React, { useRef, useEffect, useState } from 'react'
 import Head from 'next/head'
+import Link from 'next/link'
 import Image from 'next/image'
-import Link from "next/link"
-import { type } from 'os'
 import * as THREE from 'three'
 import { Link as Scroll } from 'react-scroll'
 import Gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { client } from '../libs/client'
 import WAVES from 'vanta/dist/vanta.waves.min.js'
-import styles from '../styles/Home.module.scss'
 import Header from '../components/header'
 import Footer from '../components/footer'
 import SkillList from '../components/skillsList'
 import WorksList from '../components/worksList'
+import Heading from '../components/heading'
 
 import type { Works, Category } from '../types/works'
 
@@ -54,7 +53,6 @@ export default function Home({
         el: vantaRef.current,
         THREE,
         color: 0x003775,
-        // color: 0x5588,
         shininess: 30,
         waveHeight: 15,
         waveSpeed: 1,
@@ -69,23 +67,39 @@ export default function Home({
       }))
     }
 
+    const aniConfigPC = {
+      start: 'top 80%',
+      end: 'bottom 20%',
+      toggleClass: 'is-animation',
+      once: true
+    }
+
+    const aniConfigSP = {
+      start: 'top 90%',
+      end: 'bottom 10%',
+      toggleClass: 'is-animation',
+      once: true
+    }
+
     ScrollTrigger.matchMedia({
       '(min-width: 751px)': function () {
-        ScrollTrigger.batch('.js-fadein', {
-          start: 'top 80%',
-          end: 'bottom 20%',
-          toggleClass: 'is-animation',
-          once: true
-        })
+        ScrollTrigger.batch('.js-fadeinup-small', aniConfigPC)
+        ScrollTrigger.batch('.js-fadeinup-middle', aniConfigPC)
+        ScrollTrigger.batch('.js-fadeinup-large', aniConfigPC)
+        ScrollTrigger.batch('.js-fadeinup-text', aniConfigPC)
+        ScrollTrigger.batch('.js-fadeinup-title', aniConfigPC)
+        ScrollTrigger.batch('.js-fadeinup-desc', aniConfigPC)
+        ScrollTrigger.batch('.js-fadein-experience', aniConfigPC)
       },
 
       '(max-width: 750px)': function () {
-        ScrollTrigger.batch('.js-fadein', {
-          start: 'top 80%',
-          end: 'bottom 20%',
-          toggleClass: 'is-animation',
-          once: true
-        })
+        ScrollTrigger.batch('.js-fadeinup-small', aniConfigSP)
+        ScrollTrigger.batch('.js-fadeinup-middle', aniConfigSP)
+        ScrollTrigger.batch('.js-fadeinup-large', aniConfigSP)
+        ScrollTrigger.batch('.js-fadeinup-text', aniConfigSP)
+        ScrollTrigger.batch('.js-fadeinup-title', aniConfigSP)
+        ScrollTrigger.batch('.js-fadeinup-desc', aniConfigSP)
+        ScrollTrigger.batch('.js-fadein-experience', aniConfigSP)
       },
     });
 
@@ -105,8 +119,11 @@ export default function Home({
       <main className="l-main">
         <div className="p-polygon-bg" ref={vantaRef}></div>
         <section className="p-mainvisual">
-          <h1 className="p-mainvisual__title">Yuki Sumida<br/>Portfolio</h1>
-          <p className="p-mainvisual__desc">Front-end Engineer</p>
+          <h1 className="p-mainvisual__title">
+            <span className="js-fadeinup-title"><span>Y</span><span>u</span><span>k</span><span>i</span> <span>S</span><span>u</span><span>m</span><span>i</span><span>d</span><span>a</span></span>
+            <span className="js-fadeinup-title"><span>P</span><span>o</span><span>r</span><span>t</span><span>f</span><span>o</span><span>l</span><span>i</span><span>o</span></span>
+          </h1>
+          <p className="p-mainvisual__desc js-fadeinup-desc"><span>Front-end</span> <span>Engineer</span></p>
           <Scroll className="p-mainvisual__scroll" to="a-about" smooth={true} duration={500} offset={-100}>
             <div className="p-mainvisual__scroll-mouse"></div>
             <div className="p-mainvisual__scroll-text">Scroll</div>
@@ -114,11 +131,8 @@ export default function Home({
         </section>
         <section className="p-about" id="a-about">
           <div className="l-inner-wrap">
-            <div className="c-heading">
-              <h2 className="c-heading__en">About</h2>
-              <div className="c-heading__ja">私について</div>
-            </div>
-            <div className="p-about__box">
+            <Heading en="About" ja="私について" addClass="" />
+            <div className="p-about__box js-fadeinup-middle">
               <div className="p-about__visual">
                 <Image src="/images/img-portrait.webp" alt="" width={250} height={250} className="p-about__visual-img" />
               </div>
@@ -136,29 +150,37 @@ export default function Home({
         </section>
         <section className="p-experience" id="a-experience">
           <div className="l-inner-wrap">
-            <div className="c-heading is-white">
-              <h2 className="c-heading__en">Experience</h2>
-              <div className="c-heading__ja">経歴</div>
-            </div>
+            <Heading en="Experience" ja="経歴" addClass=" is-white" />
             <ul className="p-experience__list">
-              <li className="p-experience__item js-fadein">
+              <li className="p-experience__item js-fadein-experience">
                 <div className="p-experience__item-box">
-
+                  <div className="p-experience__item-label">2017/03</div>
+                  <h3 className="p-experience__item-name">国際トラベル・ホテル・ブライダル専門学校 卒業</h3>
+                  <p className="p-experience__item-post">鉄道科</p>
                 </div>
               </li>
-              <li className="p-experience__item js-fadein">
+              <li className="p-experience__item js-fadein-experience">
                 <div className="p-experience__item-box">
-
+                  <div className="p-experience__item-label">2017/04～</div>
+                  <h3 className="p-experience__item-name">東武インターテック株式会社</h3>
+                  <p className="p-experience__item-post">川越工場</p>
+                  <p className="p-experience__item-desc">鉄道車両の整備に従事。</p>
                 </div>
               </li>
-              <li className="p-experience__item js-fadein">
+              <li className="p-experience__item js-fadein-experience">
                 <div className="p-experience__item-box">
-
+                  <div className="p-experience__item-label">2017/10～</div>
+                  <h3 className="p-experience__item-name">株式会社インターライフメディア</h3>
+                  <p className="p-experience__item-post">フロントエンドエンジニア</p>
+                  <p className="p-experience__item-desc">Webサイトのリニューアルや新規構築など、受託開発をメインに担当。その他月次作業などの保守運用も担当。</p>
                 </div>
               </li>
-              <li className="p-experience__item js-fadein">
+              <li className="p-experience__item js-fadein-experience">
                 <div className="p-experience__item-box">
-
+                  <div className="p-experience__item-label">2021/02～</div>
+                  <h3 className="p-experience__item-name">店舗流通ネット株式会社</h3>
+                  <p className="p-experience__item-post">フロントエンドエンジニア</p>
+                  <p className="p-experience__item-desc">自社Webサイトのリニューアルや新規構築、保守運用などインハウス業務をメインに担当。その他取引先からの受託開発なども担当。</p>
                 </div>
               </li>
             </ul>
@@ -166,22 +188,21 @@ export default function Home({
         </section>
         <section className="p-skills" id="a-skills">
           <div className="l-inner-wrap">
-            <div className="c-heading js-fadein">
-              <h2 className="c-heading__en">Skills</h2>
-              <div className="c-heading__ja">スキル</div>
-            </div>
+            <Heading en="Skills" ja="スキル" addClass="" />
             <SkillList />
           </div>
         </section>
         <section className="p-works" id="a-works">
           <div className="l-inner-wrap">
-            <div className="c-heading is-white">
-              <h2 className="c-heading__en">Works</h2>
-              <div className="c-heading__ja">制作物</div>
-            </div>
+            <Heading en="Works" ja="制作物" addClass=" is-white" />
             <WorksList works={works} category={category} />
           </div>
         </section>
+        <div className="p-github">
+          <Link href="https://github.com/Waterfox-skjp" target="_blank" rel="noopener" className="p-github__link">
+            <Image src="images/logo-github.svg" alt="" width={50} height={50} />
+          </Link>
+        </div>
       </main>
       <Footer/>
     </div>

@@ -27,7 +27,8 @@
     letter-spacing: .1em;
   }
   &__desc {
-    margin-top: 14px;
+    margin-top: 8px;
+    line-height: 1.5;
     font-family: var(--font-en-primary);
     font-size: 26px;
     text-align: center;
@@ -55,7 +56,7 @@
         content: "";
         background: #fff;
         transform: translateX(-50%);
-        animation: mouse-wheel 2s infinite;
+        animation: mouseWheel 2s infinite;
       }
     }
     &-text {
@@ -129,7 +130,7 @@
       background: #fff;
     }
   }
-  &__item { position: relative; width: 50%;
+  &__item { position: relative; width: 50%; filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, .3));
     &::before {
       position: absolute;
       top: 50%;
@@ -153,10 +154,43 @@
     }
     &-box {
       border-radius: 10px;
+      padding: 84px 40px 40px;
+      position: relative;
       width: 83.333%;
-      height: 300px; // todo
+      color: g.$text_color;
       background: #fff;
       transform: rotateX(90deg);
+    }
+    &-label {
+      padding: .5em 1em .5em 40px;
+      position: absolute;
+      top: 40px;
+      left: 0;
+      width: fit-content;
+      color: #fff;
+      background: g.$primary_color;
+      font-family: var(--font-en-primary);
+      font-weight: 700;
+      letter-spacing: .1em;
+    }
+    &-name {
+      line-height: 1.5;
+      font-weight: 700;
+      letter-spacing: .1em;
+    }
+    &-post {
+      margin-top: 10px;
+      line-height: 1.5;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: .1em;
+    }
+    &-desc {
+      margin-top: 20px;
+      line-height: 1.5;
+      color: #888;
+      font-size: 14px;
+      letter-spacing: .1em;
     }
     &:nth-child(even) { margin-left: auto;
       &::before { right: auto; left: 0; }
@@ -164,8 +198,8 @@
       .p-experience__item-box { margin-left: auto; }
     }
     &.is-animation {
-      &::before { animation: smoothed-arrow .7s ease-in-out both; }
-      .p-experience__item-box { animation: flip-in-hor-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) .7s both; }
+      &::before { animation: smoothedArrow .7s ease-in-out both; }
+      .p-experience__item-box { animation: flipinhorTop 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) .7s both; }
     }
   }
 }
@@ -216,63 +250,71 @@
       hsl(212deg 79% 46%) 69%,
       hsl(212deg 76% 49%) 79%,
       hsl(212deg 73% 52%) 100%);
+  &__filter {
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+    &-item.is-active {
+      .p-works__filter-btn { color: g.$primary_color; background: #fff; }
+    }
+    &-btn {
+      border-radius: 5px;
+      border: 1px solid #fff;
+      padding: .95em 2em;
+      color: #fff;
+      font-weight: 500;
+      letter-spacing: .1em;
+      transition: color .3s, background-color .3s;
+      cursor: pointer;
+      @include g.hover() {
+        color: g.$primary_color;
+        background: #fff;
+      }
+    }
+  }
   &__list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(372px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 40px 40px;
   }
-
   &__item {
-    aspect-ratio: 300 / 100; // あとでけす
-
     &-link {
       display: block;
+      @include g.hover() {
+        .p-works__item-img { transform: scale(1.1); }
+      }
     }
-
-    &-thumb {}
-
+    &-thumb { margin-bottom: 10px; border-radius: 10px; overflow: hidden; }
     &-img {
       width: 100%;
+      aspect-ratio: 372 / 230;
+      object-fit: cover;
+      transition: transform .3s;
     }
-
     &-title {
+      line-height: 1.5;
+      color: #fff;
+      font-weight: 500;
+      letter-spacing: .1em;
+    }
+    &-desc {
+      line-height: 1.5;
+      color: rgba(255,255,255,.7);
+      font-size: 14px;
       letter-spacing: .1em;
     }
   }
 }
-
-@keyframes mouse-wheel {
-  0% {
-      transform: translate(-50%, 0);
-      opacity: 0
+.p-github { padding: 120px 0; background: #fff;
+  &__link {
+    margin: 0 auto;
+    display: block;
+    width: 50px;
+    transition: opacity .3s;
+    @include g.hover() {
+      opacity: .7;
     }
-
-    40% {
-      opacity: 1
-    }
-
-    80% {
-      -webkit-transform: translate(-50%, 20px);
-      transform: translate(-50%, 20px);
-      opacity: 0
-    }
-
-    100% {
-      opacity: 0
-    }
-}
-
-@keyframes smoothed-arrow {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-@keyframes flip-in-hor-top {
-  0% {
-    transform: rotateX(-90deg);
-  }
-
-  100% {
-    transform: rotateX(0);
   }
 }
