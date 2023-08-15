@@ -39,41 +39,39 @@ Gsap.config({
   nullTargetWarn: false,
 });
 
-export default function Home({ works, category }: Props) {
+export default function Home( { works, category } : Props ) {
   useEffect(() => {
-    const aniConfigPC = {
-      start: 'top 80%',
-      end: 'bottom 20%',
-      toggleClass: 'is-animation',
-      once: true
-    }
-    const aniConfigSP = {
-      start: 'top 90%',
-      end: 'bottom 10%',
-      toggleClass: 'is-animation',
-      once: true
-    }
+    const animeHook = [
+      'js-fadeinup-small',
+      'js-fadeinup-middle',
+      'js-fadeinup-large',
+      'js-fadeinup-text',
+      'js-fadeinup-title',
+      'js-fadeinup-desc',
+      'js-fadein-experience'
+    ]
     ScrollTrigger.matchMedia({
       '(min-width: 751px)': function () {
-        ScrollTrigger.batch('.js-fadeinup-small', aniConfigPC)
-        ScrollTrigger.batch('.js-fadeinup-middle', aniConfigPC)
-        ScrollTrigger.batch('.js-fadeinup-large', aniConfigPC)
-        ScrollTrigger.batch('.js-fadeinup-text', aniConfigPC)
-        ScrollTrigger.batch('.js-fadeinup-title', aniConfigPC)
-        ScrollTrigger.batch('.js-fadeinup-desc', aniConfigPC)
-        ScrollTrigger.batch('.js-fadein-experience', aniConfigPC)
+        animeHook.forEach(value => {
+          ScrollTrigger.batch('.' + value, {
+            start: 'top 80%',
+            end: 'bottom 20%',
+            toggleClass: 'is-animation',
+            once: true
+          })
+        });
       },
-
       '(max-width: 750px)': function () {
-        ScrollTrigger.batch('.js-fadeinup-small', aniConfigSP)
-        ScrollTrigger.batch('.js-fadeinup-middle', aniConfigSP)
-        ScrollTrigger.batch('.js-fadeinup-large', aniConfigSP)
-        ScrollTrigger.batch('.js-fadeinup-text', aniConfigSP)
-        ScrollTrigger.batch('.js-fadeinup-title', aniConfigSP)
-        ScrollTrigger.batch('.js-fadeinup-desc', aniConfigSP)
-        ScrollTrigger.batch('.js-fadein-experience', aniConfigSP)
+        animeHook.forEach(value => {
+          ScrollTrigger.batch('.' + value, {
+            start: 'top 90%',
+            end: 'bottom 10%',
+            toggleClass: 'is-animation',
+            once: true
+          })
+        });
       },
-    });
+    })
   })
 
   return (
