@@ -103,12 +103,10 @@ export default function Home( { works, category } : Props ) {
                 <Image src="/images/img-portrait.webp" alt="" width={250} height={250} className="p-about__visual-img" />
               </div>
               <div className="p-about__contents">
-                <p className="p-about__contents-text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                <p className="p-about__contents-text">千葉県松戸市在住の26歳。学生時代から趣味でWeb制作をしており、独学でHTML、CSS、JavaScriptを習得。また、Web制作会社で勤務していた経験からCSSアニメーションやJavaScriptを用いた“動き”のあるサイトの他、Core Web VitalsやセマンティックコーディングといったSEOに直結する分野においても多くの知見を持つ。<br />最近はNext.jsやNuxt.jsといったモダンな開発にも積極的に挑戦。</p>
                 <dl className="p-about__contents-list">
-                  <dt>年齢</dt>
-                  <dd>26歳</dd>
                   <dt>趣味</dt>
-                  <dd>ツーリング・ドライブ・カメラ・ラジオ</dd>
+                  <dd>ツーリング、ドライブ、カメラ、スノーボード</dd>
                 </dl>
               </div>
             </div>
@@ -138,7 +136,7 @@ export default function Home( { works, category } : Props ) {
                   <div className="p-experience__item-label">2017/10～</div>
                   <h3 className="p-experience__item-name">株式会社インターライフメディア</h3>
                   <p className="p-experience__item-post">フロントエンドエンジニア</p>
-                  <p className="p-experience__item-desc">Webサイトのリニューアルや新規構築など、受託開発をメインに担当。その他月次作業などの保守運用も担当。</p>
+                  <p className="p-experience__item-desc">Webサイトの新規構築やリニューアルなど、受託開発をメインに担当。その他月次作業などの保守運用も担当。</p>
                 </div>
               </li>
               <li className="p-experience__item js-fadein-experience">
@@ -146,7 +144,7 @@ export default function Home( { works, category } : Props ) {
                   <div className="p-experience__item-label">2021/02～</div>
                   <h3 className="p-experience__item-name">店舗流通ネット株式会社</h3>
                   <p className="p-experience__item-post">フロントエンドエンジニア</p>
-                  <p className="p-experience__item-desc">自社Webサイトのリニューアルや新規構築、保守運用などインハウス業務をメインに担当。その他取引先からの受託開発なども担当。</p>
+                  <p className="p-experience__item-desc">自社Webサイトの新規構築やリニューアル、保守運用などインハウス業務をメインに担当。その他取引先からの受託開発なども担当。</p>
                 </div>
               </li>
             </ul>
@@ -166,7 +164,7 @@ export default function Home( { works, category } : Props ) {
         </section>
         <div className="p-github">
           <Link href="https://github.com/Waterfox-skjp" target="_blank" rel="noopener" className="p-github__link">
-            <Image src="images/logo-github.svg" alt="" width={50} height={50} />
+            <Image src="images/logo-github.svg" alt="GitHub" width={50} height={50} />
           </Link>
         </div>
       </main>
