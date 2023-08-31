@@ -1,3 +1,24 @@
+@use "sass:math";
+@use "variables" as var;
+
+// pxをパーセントで出力
+@function px($size, $width: var.$breakpoint) {
+  $rate: math.div($size, var.$breakpoint) * (math.div(var.$breakpoint, $width));
+  @return $rate * 100 * 1%;
+}
+
+// 第一引数で基準となる画面幅のフォントサイズ、第二引数で基準となる画面幅を入力
+@function get_vw($size, $width: var.$breakpoint) {
+  $rate: math.div(100, $width);
+  @return $rate * $size * 1vw;
+}
+
+// フォントサイズをremとvwで出力
+@mixin fz_vw($font_size: 10) {
+  // font-size: math.div($font-size, 10) * 1rem;
+  font-size: get_vw($font_size);
+}
+
 @mixin hover() {
   @media (hover: hover) {
     &:hover {

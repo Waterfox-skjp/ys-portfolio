@@ -1,5 +1,12 @@
+@use "../global/" as g;
+
 @keyframes fadeinUpSmall {
   from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeinUpSmallSP {
+  from { opacity: 0; transform: translateY(g.get_vw(40)); }
   to { opacity: 1; transform: translateY(0); }
 }
 
@@ -8,9 +15,26 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes fadeinUpMiddleSP {
+  from { opacity: 0; transform: translateY(g.get_vw(100)); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 @keyframes fadeinUpLarge {
   from { opacity: 0; transform: translateY(80px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeinUpLargeSP {
+  from {
+    opacity: 0;
+    transform: translateY(g.get_vw(160));
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes mouseWheel {
@@ -32,6 +56,13 @@
     100% {
       opacity: 0
     }
+}
+
+@keyframes touchWheel {
+  0% { opacity: 0; }
+  40% { opacity: 1; }
+  80% { transform: translate(-50%, g.get_vw(-40)); opacity: 0; }
+  100% { opacity: 0; }
 }
 
 @keyframes smoothedArrow {
@@ -102,5 +133,19 @@
         }
       }
     }
+  }
+}
+
+@media only screen and (max-width: #{g.$breakpoint}px) {
+  .js-fadeinup-small { transform: translateY(g.get_vw(40));
+    &.is-animation { animation: fadeinUpSmallSP .7s ease-in-out .2s both; }
+  }
+
+  .js-fadeinup-middle { transform: translateY(g.get_vw(100));
+    &.is-animation { animation: fadeinUpMiddleSP .7s ease-in-out .2s both; }
+  }
+
+  .js-fadeinup-large { transform: translateY(g.get_vw(160));
+    &.is-animation { animation: fadeinUpMiddleSP .7s ease-in-out .2s both; }
   }
 }

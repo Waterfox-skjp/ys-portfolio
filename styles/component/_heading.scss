@@ -13,3 +13,10 @@
     .c-heading__en, .c-heading__ja { color: #fff; }
   }
 }
+
+@media only screen and (max-width: #{g.$breakpoint}px) {
+  .c-heading { margin-bottom: g.px(80, 670);
+    &__en { margin-bottom: g.px(20,670); @include g.fz_vw(74); }
+    &__ja { @include g.fz_vw(28); }
+  }
+}

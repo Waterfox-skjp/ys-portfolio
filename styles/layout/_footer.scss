@@ -3,3 +3,9 @@
 .l-footer { padding: 26px 0; color: #fff; background: g.$primary_color;
   &__copyright { font-size: 14px; text-align: center; letter-spacing: .1em; }
 }
+
+@media only screen and (max-width: #{g.$breakpoint}px) {
+  .l-footer { padding: g.px(60) 0;
+    &__copyright { @include g.fz_vw(28); }
+  }
+}

@@ -17,3 +17,14 @@
     background: #2b7fde;
   }
 }
+
+@media only screen and (max-width: #{g.$breakpoint}px) {
+  .c-button {
+    border-radius: g.get_vw(10);
+    margin-top: g.px(80,670);
+    padding: 1em 2em;
+    min-width: auto;
+    width: g.px(400,670);
+    @include g.fz_vw(28);
+  }
+}

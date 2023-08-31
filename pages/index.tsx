@@ -2,7 +2,6 @@ import React, { useRef, useEffect, useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Link as Scroll } from 'react-scroll'
 import Gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { client } from '../libs/client'
@@ -90,10 +89,10 @@ export default function Home( { works, category } : Props ) {
             <span className="js-fadeinup-title"><span>P</span><span>o</span><span>r</span><span>t</span><span>f</span><span>o</span><span>l</span><span>i</span><span>o</span></span>
           </h1>
           <p className="p-mainvisual__desc js-fadeinup-desc"><span>Front-end</span> <span>Engineer</span></p>
-          <Scroll className="p-mainvisual__scroll" to="a-about" smooth={true} duration={500} offset={-100}>
+          <div className="p-mainvisual__scroll">
             <div className="p-mainvisual__scroll-mouse"></div>
             <div className="p-mainvisual__scroll-text">Scroll</div>
-          </Scroll>
+          </div>
         </section>
         <section className="p-about" id="a-about">
           <div className="l-inner-wrap">
