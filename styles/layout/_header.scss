@@ -91,7 +91,7 @@
       }
       &-item {
         border-bottom: 1px solid #ccc;
-        @include g.fz_vw(40);
+        @include g.fz_vw(32);
       }
       &-link {
         padding: g.px(40,590);

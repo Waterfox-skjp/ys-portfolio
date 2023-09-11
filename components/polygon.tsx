@@ -25,7 +25,7 @@ export default function Polygon() {
       }))
     }
     return () => {
-      if (vantaEffect) vantaEffect.destory()
+      if (vantaEffect) vantaEffect.destroy()
     }
   }, [vantaEffect])
   return (
