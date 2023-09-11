@@ -30,7 +30,7 @@ export default function Polygon() {
   }, [vantaEffect])
   return (
     <>
-      <div className="p-polygon-bg" ref={vantaRef}></div>
+      <div className="c-polygon-bg" ref={vantaRef}></div>
     </>
   )
 }

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -21,8 +21,8 @@ type Props = {
 
 // microCMSへAPIリクエスト
 export const getStaticProps = async () => {
-  const works = await client.get({ endpoint: "works" })
-  const categories = await client.get({ endpoint: "categories" })
+  const works = await client.get({ endpoint: 'works' })
+  const categories = await client.get({ endpoint: 'categories' })
 
   return {
     props: {
@@ -30,13 +30,13 @@ export const getStaticProps = async () => {
       category: categories.contents,
     },
   }
-};
+}
 
 // ScrollTriggerの初期化
-Gsap.registerPlugin(ScrollTrigger);
+Gsap.registerPlugin(ScrollTrigger)
 Gsap.config({
   nullTargetWarn: false,
-});
+})
 
 export default function Home( { works, category } : Props ) {
   useEffect(() => {
@@ -58,7 +58,7 @@ export default function Home( { works, category } : Props ) {
             toggleClass: 'is-animation',
             once: true
           })
-        });
+        })
       },
       '(max-width: 750px)': function () {
         animeHook.forEach(value => {
@@ -68,13 +68,13 @@ export default function Home( { works, category } : Props ) {
             toggleClass: 'is-animation',
             once: true
           })
-        });
+        })
       },
     })
   })
 
   return (
-    <div className="l-wrap">
+    <>
       <Head>
         <title>Yuki Sumida Portfolio</title>
         <meta name="description" content="My portfolio" />
@@ -83,15 +83,15 @@ export default function Home( { works, category } : Props ) {
       <Header />
       <main className="l-main">
         <Polygon />
-        <section className="p-mainvisual">
-          <h1 className="p-mainvisual__title">
+        <section className="p-hero">
+          <h1 className="p-hero__title">
             <span className="js-fadeinup-title"><span>Y</span><span>u</span><span>k</span><span>i</span> <span>S</span><span>u</span><span>m</span><span>i</span><span>d</span><span>a</span></span>
             <span className="js-fadeinup-title"><span>P</span><span>o</span><span>r</span><span>t</span><span>f</span><span>o</span><span>l</span><span>i</span><span>o</span></span>
           </h1>
-          <p className="p-mainvisual__desc js-fadeinup-desc"><span>Front-end</span> <span>Engineer</span></p>
-          <div className="p-mainvisual__scroll">
-            <div className="p-mainvisual__scroll-mouse"></div>
-            <div className="p-mainvisual__scroll-text">Scroll</div>
+          <p className="p-hero__desc js-fadeinup-desc"><span>Front-end</span> <span>Engineer</span></p>
+          <div className="p-hero__scroll">
+            <div className="p-hero__scroll-mouse"></div>
+            <div className="p-hero__scroll-text">Scroll</div>
           </div>
         </section>
         <section className="p-about" id="a-about">
@@ -99,7 +99,7 @@ export default function Home( { works, category } : Props ) {
             <Heading en="About" ja="私について" addClass="" />
             <div className="p-about__box js-fadeinup-middle">
               <div className="p-about__visual">
-                <Image src="/images/img-portrait.webp" alt="" width={250} height={250} className="p-about__visual-img" />
+                <Image src="/images/img-portrait.webp" alt="" width="250" height="250" className="p-about__visual-img" />
               </div>
               <div className="p-about__contents">
                 <p className="p-about__contents-text">千葉県松戸市在住の26歳。学生時代から趣味でWeb制作をしており、独学でHTML、CSS、JavaScriptを習得。また、Web制作会社で勤務していた経験からCSSアニメーションやJavaScriptを用いた“動き”のあるサイトの他、Core Web VitalsやセマンティックコーディングといったSEOに直結する分野においても多くの知見を持つ。<br />最近はNext.jsやNuxt.jsといったモダンな開発にも積極的に挑戦。</p>
@@ -163,11 +163,11 @@ export default function Home( { works, category } : Props ) {
         </section>
         <div className="p-github">
           <Link href="https://github.com/Waterfox-skjp" target="_blank" rel="noopener" className="p-github__link">
-            <Image src="images/logo-github.svg" alt="GitHub" width={50} height={50} />
+            <Image src="images/logo-github.svg" alt="GitHub" width="50" height="50" />
           </Link>
         </div>
       </main>
       <Footer />
-    </div>
+    </>
   )
 }

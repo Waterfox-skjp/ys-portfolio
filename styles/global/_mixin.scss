@@ -26,3 +26,12 @@
     }
   }
 }
+
+// Google Fonts icons
+@mixin g_icon($code) {
+  font-family: "Material Icons Outlined";
+  font-style: normal;
+  font-weight: 400;
+  content: $code;
+  @content;
+}

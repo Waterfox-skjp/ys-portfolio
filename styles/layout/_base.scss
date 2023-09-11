@@ -21,6 +21,16 @@ img { vertical-align: bottom; height: auto; }
   max-width: calc(g.$content_width + 160px);
 }
 
+.l-inner-column {
+  margin: 0 auto;
+  padding: 0 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 80px;
+  width: 100%;
+  max-width: calc(g.$content_width + 160px);
+}
+
 @media only screen and (max-width: #{g.$breakpoint}px) {
   html { font-size: 62.5%; scroll-padding-top: g.get_vw(160); }
 
@@ -28,6 +38,12 @@ img { vertical-align: bottom; height: auto; }
 
   .l-inner-wrap {
     padding: 0;
+    width: g.$content_width_sp;
+  }
+
+  .l-inner-column {
+    padding: 0;
+    display: block;
     width: g.$content_width_sp;
   }
 }

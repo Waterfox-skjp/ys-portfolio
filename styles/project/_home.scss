@@ -1,14 +1,6 @@
 @use "../global/" as g;
 
-.p-polygon-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100lvh;
-}
-.p-mainvisual {
+.p-hero {
   position: relative;
   display: flex;
   align-items: center;
@@ -27,7 +19,7 @@
     letter-spacing: .1em;
   }
   &__desc {
-    margin-top: 8px;
+    margin-top: 12px;
     line-height: 1.5;
     font-family: var(--font-en-primary);
     font-size: 26px;
@@ -286,7 +278,7 @@
     &-thumb { margin-bottom: 10px; border-radius: 10px; overflow: hidden; }
     &-img {
       width: 100%;
-      aspect-ratio: 372 / 230;
+      aspect-ratio: 1.618 / 1;
       object-fit: cover;
       transition: transform .3s;
     }
@@ -296,7 +288,7 @@
       font-weight: 500;
       letter-spacing: .1em;
     }
-    &-desc {
+    &-type {
       line-height: 1.7;
       color: rgba(255,255,255,.7);
       font-size: 14px;
@@ -318,7 +310,7 @@
 }
 
 @media only screen and (max-width: #{g.$breakpoint}px) {
-  .p-mainvisual {
+  .p-hero {
     &__title { @include g.fz_vw(86); }
     &__desc { margin-top: g.px(16,670); @include g.fz_vw(32); }
     &__scroll {
@@ -336,7 +328,7 @@
       &-mouse, &-text { display: none; }
     }
   }
-  .p-about { padding: g.px(160) 0 0; background: linear-gradient(to top, g.$primary_color g.get_vw(160), #F8F8F8 g.get_vw(160));
+  .p-about { padding: g.px(120) 0 g.px(100); background: linear-gradient(to top, g.$primary_color g.get_vw(160), #F8F8F8 g.get_vw(160));
     &__box {
       border-radius: g.get_vw(10);
       padding: g.px(80, 670) g.px(40,670);
@@ -350,7 +342,7 @@
     }
   }
   .p-experience {
-    padding: g.px(160) 0;
+    padding: g.px(120) 0;
     background: linear-gradient(to top, #fff g.get_vw(60), g.$primary_color g.get_vw(60));
     &::before, &::after {
       aspect-ratio: 1440 / 254;
@@ -383,7 +375,7 @@
       }
     }
   }
-  .p-skills { padding: g.px(160) 0;
+  .p-skills { padding: g.px(120) 0;
     &__list { grid-template-columns: 1fr 1fr 1fr; gap: g.get_vw(40); }
     &__item {
       border-radius: g.get_vw(10);
@@ -392,7 +384,7 @@
       &.is-text-small .p-skills__item-name { @include g.fz_vw(24); }
     }
   }
-  .p-works { padding: g.px(160) 0;
+  .p-works { padding: g.px(120) 0;
     &__filter { margin-bottom: g.px(80, 670); column-gap: g.get_vw(40);
       &-item { width: g.px(210,670); }
       &-btn {
@@ -409,10 +401,10 @@
     &__item {
       &-thumb { margin-bottom: g.px(10,315); border-radius: g.get_vw(10); }
       &-title { @include g.fz_vw(28); }
-      &-desc { @include g.fz_vw(24); }
+      &-type { @include g.fz_vw(24); }
     }
   }
-  .p-github { padding: g.px(160) 0;
+  .p-github { padding: g.px(120) 0;
     &__link { width: g.px(100,670); }
   }
 }

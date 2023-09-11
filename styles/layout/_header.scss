@@ -66,15 +66,15 @@
 }
 
 @media only screen and (max-width: #{g.$breakpoint}px) {
-  .l-header { height: auto; aspect-ratio: 750 / 160;
+  .l-header { height: auto; aspect-ratio: 750 / 120;
     &__inner {
       padding: 0;
       width: g.px(670);
       max-width: none;
     }
-    &__logo { position: relative; z-index: 3; width: g.px(90,670); }
+    &__logo { position: relative; z-index: 3; width: g.px(70,670); }
     &__nav {
-      padding: g.px(160) g.px(40) g.px(80);
+      padding: g.px(120) g.px(40) g.px(80);
       position: fixed;
       top: 0;
       left: 0;
@@ -105,13 +105,13 @@
       display: block;
       position: relative;
       z-index: 3;
-      width: g.px(90,670);
+      width: g.px(70,670);
       aspect-ratio: 1 / 1;
       span {
         margin: 0 auto;
         position: absolute;
         width: 100%;
-        aspect-ratio: 90 / 6;
+        aspect-ratio: 90 / 5;
         background: #fff;
         transition: all .3s;
         &:nth-child(1) { top: 18%; }

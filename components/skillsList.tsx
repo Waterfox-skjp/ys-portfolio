@@ -15,12 +15,12 @@ export default function SkillList() {
   const [skill, setSkill] = useState<any>([])
   const [allSkillFlag, setAllSkillFlag] = useState<boolean>(false)
   useEffect(()=>{
-    const skills = skillData.item
+    const skillItems = skillData.item
     if (allSkillFlag) {
-      setSkill(skills)
+      setSkill(skillItems)
       return
     }
-    const omissionSkills = skills.filter((item, index) => { return index < 12 })
+    const omissionSkills = skillItems.filter((item, index) => { return index < 12 })
     setSkill(omissionSkills)
   }, [allSkillFlag])
 
@@ -39,14 +39,14 @@ export default function SkillList() {
                 ease: [0, 0.71, 0.2, 1.01]
               }}
             >
-              <div className="p-skills__item-icon"><Image src={item.src} alt="" width={87} height={87} /></div>
+              <div className="p-skills__item-icon"><Image src={item.src} alt="" width="87" height="87" /></div>
               <p className="p-skills__item-name">{item.name}</p>
             </motion.li>
           ))}
           </AnimatePresence>
         </motion.ul>
-        <button className='c-button' onClick={() => setAllSkillFlag(!allSkillFlag)}>{allSkillFlag ? 'Close' : 'More'}</button>
+        <button className="c-button is-more" onClick={() => setAllSkillFlag(!allSkillFlag)}>{allSkillFlag ? 'Close' : 'More'}</button>
       </div>
     </>
-  );
+  )
 }

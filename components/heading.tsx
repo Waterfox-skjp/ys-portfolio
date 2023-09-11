@@ -1,11 +1,11 @@
 type Props = {
-  en: string;
-  ja: string;
-  addClass: string;
-};
+  en: string
+  ja: string
+  addClass: string
+}
 
 function textAry( text : string ) {
-  return text.split('');
+  return text.split('')
 }
 
 export default function Heading( { en, ja, addClass } : Props ) {

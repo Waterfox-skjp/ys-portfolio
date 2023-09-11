@@ -3,24 +3,11 @@
 @use "./layout/header";
 @use "./layout/footer";
 
+@use "./component/bg";
 @use "./component/heading";
 @use "./component/button";
 
 @use "./project/home";
+@use "./project/works";
 
 @use "./layout/animation";
-
-// a {
-//   color: inherit;
-//   text-decoration: none;
-// }
-
-// @media (prefers-color-scheme: dark) {
-//   html {
-//     color-scheme: dark;
-//   }
-//   body {
-//     color: white;
-//     background: black;
-//   }
-// }

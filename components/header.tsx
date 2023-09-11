@@ -37,7 +37,7 @@ export default function Header() {
         <div className="l-header__inner">
           <div className="l-header__logo">
             <Link href="/" className="l-header__logo-link">
-              <Image src="images/logo.svg" alt="Su" width={50} height={50} className="l-header__logo-img" />
+              <Image src="/images/logo.svg" alt="Su" width="50" height="50" className="l-header__logo-img" />
             </Link>
           </div>
           <nav className="l-header__nav">

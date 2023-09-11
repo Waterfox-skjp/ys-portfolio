@@ -2,10 +2,10 @@
 
 .c-button {
   border-radius: 8px;
-  margin: 60px auto 0;
+  margin: 0 auto;
   padding: 1em 2em;
   display: block;
-  min-width: 200px;
+  position: relative;
   color: #fff;
   background: g.$primary_color;
   font-weight: 500;
@@ -16,15 +16,29 @@
   @include g.hover() {
     background: #2b7fde;
   }
+  &.is-more { margin-top: 60px; min-width: 200px; }
+  &.is-back {
+    padding-left: 3em;
+    width: 300px;
+    font-size: 20px;
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: .5em;
+      @include g.g_icon("\e408");
+      font-size: 1.5em;
+      transform: translateY(-50%);
+    }
+  }
 }
 
 @media only screen and (max-width: #{g.$breakpoint}px) {
   .c-button {
     border-radius: g.get_vw(10);
-    margin-top: g.px(80,670);
     padding: 1em 2em;
-    min-width: auto;
     width: g.px(400,670);
     @include g.fz_vw(28);
+    &.is-more { margin-top: g.px(80,670); min-width: auto; }
+    &.is-back { width: 100%; @include g.fz_vw(32); }
   }
 }
