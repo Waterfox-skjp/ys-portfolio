@@ -3,163 +3,163 @@
     {
       "id": "0",
       "name": "HTML",
-      "src": "/images/skill/icon-html5.svg",
+      "src": "/images/icon/icon-html5.svg",
       "itemclass": ""
     },
     {
       "id": "1",
       "name": "CSS",
-      "src": "/images/skill/icon-css3.svg",
+      "src": "/images/icon/icon-css3.svg",
       "itemclass": ""
     },
     {
       "id": "2",
       "name": "Sass",
-      "src": "/images/skill/icon-sass.svg",
+      "src": "/images/icon/icon-sass.svg",
       "itemclass": ""
     },
     {
       "id": "3",
       "name": "JavaScript",
-      "src": "/images/skill/icon-javascript.svg",
+      "src": "/images/icon/icon-javascript.svg",
       "itemclass": ""
     },
     {
       "id": "4",
       "name": "TypeScript",
-      "src": "/images/skill/icon-typescript.svg",
+      "src": "/images/icon/icon-typescript.svg",
       "itemclass": ""
     },
     {
       "id": "5",
       "name": "jQuery",
-      "src": "/images/skill/icon-jquery.svg",
+      "src": "/images/icon/icon-jquery.svg",
       "itemclass": ""
     },
     {
       "id": "6",
       "name": "Vue.js",
-      "src": "/images/skill/icon-vue.svg",
+      "src": "/images/icon/icon-vue.svg",
       "itemclass": ""
     },
     {
       "id": "7",
       "name": "Nuxt.js",
-      "src": "/images/skill/icon-nuxtjs.svg",
+      "src": "/images/icon/icon-nuxtjs.svg",
       "itemclass": ""
     },
     {
       "id": "8",
       "name": "React",
-      "src": "/images/skill/icon-react.svg",
+      "src": "/images/icon/icon-react.svg",
       "itemclass": ""
     },
     {
       "id": "9",
       "name": "Next.js",
-      "src": "/images/skill/icon-nextjs.svg",
+      "src": "/images/icon/icon-nextjs.svg",
       "itemclass": ""
     },
     {
       "id": "10",
       "name": "Node.js",
-      "src": "/images/skill/icon-nodejs.svg",
+      "src": "/images/icon/icon-nodejs.svg",
       "itemclass": ""
     },
     {
       "id": "11",
       "name": "PHP",
-      "src": "/images/skill/icon-php.svg",
+      "src": "/images/icon/icon-php.svg",
       "itemclass": ""
     },
     {
       "id": "12",
       "name": "WordPress",
-      "src": "/images/skill/icon-wordpress.svg",
+      "src": "/images/icon/icon-wordpress.svg",
       "itemclass": ""
     },
     {
       "id": "13",
       "name": "Laravel",
-      "src": "/images/skill/icon-laravel.svg",
+      "src": "/images/icon/icon-laravel.svg",
       "itemclass": ""
     },
     {
       "id": "14",
       "name": "Google Apps Script",
-      "src": "/images/skill/icon-gas.svg",
+      "src": "/images/icon/icon-gas.svg",
       "itemclass": " is-text-small"
     },
     {
       "id": "15",
       "name": "Python",
-      "src": "/images/skill/icon-python.svg",
+      "src": "/images/icon/icon-python.svg",
       "itemclass": ""
     },
     {
       "id": "16",
       "name": "Gulp",
-      "src": "/images/skill/icon-gulp.svg",
+      "src": "/images/icon/icon-gulp.svg",
       "itemclass": ""
     },
     {
       "id": "17",
       "name": "webpack",
-      "src": "/images/skill/icon-webpack.svg",
+      "src": "/images/icon/icon-webpack.svg",
       "itemclass": ""
     },
     {
       "id": "18",
       "name": "Git",
-      "src": "/images/skill/icon-git.svg",
+      "src": "/images/icon/icon-git.svg",
       "itemclass": ""
     },
     {
       "id": "19",
       "name": "VSCode",
-      "src": "/images/skill/icon-vscode.svg",
+      "src": "/images/icon/icon-vscode.svg",
       "itemclass": ""
     },
     {
       "id": "20",
       "name": "Docker",
-      "src": "/images/skill/icon-docker.svg",
+      "src": "/images/icon/icon-docker.svg",
       "itemclass": ""
     },
     {
       "id": "21",
       "name": "Vagrant",
-      "src": "/images/skill/icon-vagrant.svg",
+      "src": "/images/icon/icon-vagrant.svg",
       "itemclass": ""
     },
     {
       "id": "22",
       "name": "Firebase",
-      "src": "/images/skill/icon-firebase.png",
+      "src": "/images/icon/icon-firebase.png",
       "itemclass": ""
     },
     {
       "id": "23",
       "name": "Linux",
-      "src": "/images/skill/icon-linux.png",
+      "src": "/images/icon/icon-linux.png",
       "itemclass": ""
     },
     {
       "id": "24",
       "name": "Photoshop",
-      "src": "/images/skill/icon-photoshop.svg",
+      "src": "/images/icon/icon-photoshop.svg",
       "itemclass": ""
     },
     {
       "id": "25",
       "name": "Figma",
-      "src": "/images/skill/icon-figma.svg",
+      "src": "/images/icon/icon-figma.svg",
       "itemclass": ""
     },
     {
       "id": "26",
       "name": "Backlog",
-      "src": "/images/skill/icon-backlog.svg",
+      "src": "/images/icon/icon-backlog.svg",
       "itemclass": ""
     }
   ]

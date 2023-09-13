@@ -3,7 +3,6 @@ import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import skillData from '../store/skill.json'
 
-
 type SkillItem = {
   id: number
   name: string

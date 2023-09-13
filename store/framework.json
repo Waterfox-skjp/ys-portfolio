@@ -2,38 +2,48 @@
   "item": [
     {
       "id": "0",
-      "name": "WordPress",
-      "src": "/images/skill/icon-wordpress.svg"
+      "name": "PHP",
+      "src": "/images/icon/icon-php.svg"
     },
     {
       "id": "1",
-      "name": "jQuery",
-      "src": "/images/skill/icon-jquery.svg"
+      "name": "WordPress",
+      "src": "/images/icon/icon-wordpress.svg"
     },
     {
       "id": "2",
-      "name": "Vue.js",
-      "src": "/images/skill/icon-vue.svg"
+      "name": "CakePHP",
+      "src": "/images/icon/icon-cakephp.svg"
     },
     {
       "id": "3",
-      "name": "Nuxt.js",
-      "src": "/images/skill/icon-nuxtjs.svg"
+      "name": "jQuery",
+      "src": "/images/icon/icon-jquery.svg"
     },
     {
       "id": "4",
-      "name": "React",
-      "src": "/images/skill/icon-react.svg"
+      "name": "Vue.js",
+      "src": "/images/icon/icon-vue.svg"
     },
     {
       "id": "5",
-      "name": "Next.js",
-      "src": "/images/skill/icon-nextjs.svg"
+      "name": "Nuxt.js",
+      "src": "/images/icon/icon-nuxtjs.svg"
     },
     {
       "id": "6",
+      "name": "React",
+      "src": "/images/icon/icon-react.svg"
+    },
+    {
+      "id": "7",
+      "name": "Next.js",
+      "src": "/images/icon/icon-nextjs.svg"
+    },
+    {
+      "id": "8",
       "name": "Firebase",
-      "src": "/images/skill/icon-firebase.png"
+      "src": "/images/icon/icon-firebase.png"
     }
   ]
 }
