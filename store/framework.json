@@ -1,47 +1,47 @@
 {
   "item": [
     {
-      "id": "0",
+      "id": 0,
       "name": "PHP",
       "src": "/images/icon/icon-php.svg"
     },
     {
-      "id": "1",
+      "id": 1,
       "name": "WordPress",
       "src": "/images/icon/icon-wordpress.svg"
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "CakePHP",
       "src": "/images/icon/icon-cakephp.svg"
     },
     {
-      "id": "3",
+      "id": 3,
       "name": "jQuery",
       "src": "/images/icon/icon-jquery.svg"
     },
     {
-      "id": "4",
+      "id": 4,
       "name": "Vue.js",
       "src": "/images/icon/icon-vue.svg"
     },
     {
-      "id": "5",
+      "id": 5,
       "name": "Nuxt.js",
       "src": "/images/icon/icon-nuxtjs.svg"
     },
     {
-      "id": "6",
+      "id": 6,
       "name": "React",
       "src": "/images/icon/icon-react.svg"
     },
     {
-      "id": "7",
+      "id": 7,
       "name": "Next.js",
       "src": "/images/icon/icon-nextjs.svg"
     },
     {
-      "id": "8",
+      "id": 8,
       "name": "Firebase",
       "src": "/images/icon/icon-firebase.png"
     }
