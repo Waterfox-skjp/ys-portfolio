@@ -47,6 +47,7 @@
         letter-spacing: 0;
         text-decoration: underline;
         transition: opacity .3s;
+        word-break: break-all;
         &[target="_blank"]::after {
           position: absolute;
           right: -1.2em;
