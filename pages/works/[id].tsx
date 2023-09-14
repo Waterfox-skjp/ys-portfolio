@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
+import nl2br from 'react-nl2br'
 import { client } from '../../libs/client'
 import Header from '../../components/headerChild'
 import Polygon from '../../components/polygon'
@@ -61,7 +62,7 @@ export default function BlogId({ works }: Props) {
             <div className="p-article__contents">
               <section className="p-article__contents-wrap">
                 <h2 className="p-article__contents-heading">概要</h2>
-                <p className="p-article__contents-text">{works.about}</p>
+                <p className="p-article__contents-text">{nl2br(works.about)}</p>
               </section>
               <section className="p-article__contents-wrap">
                 <h2 className="p-article__contents-heading">URL</h2>
