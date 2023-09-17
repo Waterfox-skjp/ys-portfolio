@@ -7,6 +7,7 @@ import Header from '../../components/headerChild'
 import Polygon from '../../components/polygon'
 import Footer from '../../components/footer'
 import UseFramework from '../../components/useFramework'
+import Related from '../../components/related'
 import type { Works } from '../../types/works'
 
 // APIリクエストを行うパスを指定
@@ -22,9 +23,17 @@ export const getStaticProps = async (context: any) => {
   const id = context.params.id
   const data = await client.get({ endpoint: 'works', queries: { limit: 100 }, contentId: id })
 
+  // 前後の記事を取得
+  const { contents } = await client.get({ endpoint: 'works', queries: { limit: 100, fields: 'id,title' } })
+  const currentContent = contents.findIndex((content: any) => content.id === id)
+  const next = contents[currentContent - 1] ? contents[currentContent - 1] : null
+  const prev = contents[currentContent + 1] ? contents[currentContent + 1] : null
+
   return {
     props: {
       works: data,
+      prev: prev,
+      next: next,
     },
   }
 }
@@ -32,9 +41,17 @@ export const getStaticProps = async (context: any) => {
 // Props（blog）の型
 type Props = {
   works: Works
+  prev: {
+    id: string
+    title: string
+  }
+  next: {
+    id: string
+    title: string
+  }
 }
 
-export default function BlogId({ works }: Props) {
+export default function BlogId({ works, prev, next }: Props) {
   const screenshotRatio = works.screenshot.height / works.screenshot.width
   return (
     <>
@@ -86,6 +103,7 @@ export default function BlogId({ works }: Props) {
                 <UseFramework useFramework ={works.used_framework} />
               </section>
             </div>
+            <Related prev={prev} next={next} />
           </div>
         </section>
         <div className="p-navigation">

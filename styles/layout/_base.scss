@@ -26,7 +26,7 @@ img { vertical-align: bottom; height: auto; }
   padding: 0 80px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 80px;
+  gap: 100px 80px;
   width: 100%;
   max-width: calc(g.$content_width + 160px);
 }

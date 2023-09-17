@@ -2,7 +2,6 @@
 
 .c-button {
   border-radius: 8px;
-  margin: 0 auto;
   padding: 1em 2em;
   display: block;
   position: relative;
@@ -16,8 +15,9 @@
   @include g.hover() {
     background: #2b7fde;
   }
-  &.is-more { margin-top: 60px; min-width: 200px; }
+  &.is-more { margin: 60px auto 0; width: 200px; }
   &.is-back {
+    margin: 0 auto;
     padding-left: 3em;
     width: 300px;
     font-size: 20px;
@@ -30,15 +30,34 @@
       transform: translateY(-50%);
     }
   }
+  &.is-prev { padding-left: 3em;
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: .5em;
+      @include g.g_icon("\e408");
+      font-size: 1.5em;
+      transform: translateY(-50%);
+    }
+  }
+  &.is-next { padding-right: 3em;
+    &::before {
+      position: absolute;
+      top: 50%;
+      right: .5em;
+      @include g.g_icon("\e409");
+      font-size: 1.5em;
+      transform: translateY(-50%);
+    }
+  }
 }
 
 @media only screen and (max-width: #{g.$breakpoint}px) {
   .c-button {
     border-radius: g.get_vw(10);
     padding: 1em 2em;
-    width: g.px(400,670);
     @include g.fz_vw(28);
-    &.is-more { margin-top: g.px(80,670); min-width: auto; }
+    &.is-more { margin-top: g.px(80,670); width: g.px(400, 670); }
     &.is-back { width: 100%; @include g.fz_vw(32); }
   }
 }
