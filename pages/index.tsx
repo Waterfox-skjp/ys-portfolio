@@ -21,7 +21,7 @@ type Props = {
 
 // microCMSへAPIリクエスト
 export const getStaticProps = async () => {
-  const works = await client.get({ endpoint: 'works' })
+  const works = await client.get({ endpoint: 'works', queries: { limit: 100 } })
   const categories = await client.get({ endpoint: 'categories' })
 
   return {

@@ -11,7 +11,7 @@ import type { Works } from '../../types/works'
 
 // APIリクエストを行うパスを指定
 export const getStaticPaths = async () => {
-  const data = await client.get({ endpoint: 'works' })
+  const data = await client.get({ endpoint: 'works', queries: { limit: 100 } })
 
   const paths = data.contents.map((content: Works) => `/works/${content.id}`)
   return { paths, fallback: false }
@@ -20,7 +20,7 @@ export const getStaticPaths = async () => {
 // microCMSへAPIリクエスト
 export const getStaticProps = async (context: any) => {
   const id = context.params.id
-  const data = await client.get({ endpoint: 'works', contentId: id })
+  const data = await client.get({ endpoint: 'works', queries: { limit: 100 }, contentId: id })
 
   return {
     props: {
