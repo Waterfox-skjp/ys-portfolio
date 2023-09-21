@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import frameworkData from '../store/framework.json'
+import frameworkData from '@/store/framework.json'
 
 type Props = {
   useFramework: string[]

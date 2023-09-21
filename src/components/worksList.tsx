@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import type { Works, Category } from '../types/works'   // srcから見た絶対パスで指定
+import type { Works, Category } from '@/types/works'   // srcから見た絶対パスで指定
 
 type Props = {
   works: Works[]

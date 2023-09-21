@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { Noto_Sans_JP, Ubuntu } from 'next/font/google'
 import type { AppProps } from 'next/app'
 import 'material-icons/iconfont/outlined.css'
-import '../styles/style.scss'
+import '@/styles/style.scss'
 
 const notoSansJP = Noto_Sans_JP({
   weight: ['400', '500', '700'],
