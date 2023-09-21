@@ -27,7 +27,7 @@ export default function WorksList( { works, category } : Props ){
       <div className="js-fadeinup-large">
         <ul className="p-works__filter">
           <li className={activeCategory === '' ? 'p-works__filter-item is-active' : 'p-works__filter-item'}>
-            <button className="p-works__filter-btn" onClick={()=>setActiveCategory('')}>ALL</button>
+            <button className="p-works__filter-btn" onClick={()=>setActiveCategory('')}>All</button>
           </li>
           {category.map((item) => (
             <li className={activeCategory === item.slug ? 'p-works__filter-item is-active' : 'p-works__filter-item'} key={item.id}>
