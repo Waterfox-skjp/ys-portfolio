@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import type { Works, Category } from '../types/works'   // srcから見た絶対パスで指定
+import type { Works, Category } from '@/types/works'   // srcから見た絶対パスで指定
 
 type Props = {
   works: Works[]
@@ -27,7 +27,7 @@ export default function WorksList( { works, category } : Props ){
       <div className="js-fadeinup-large">
         <ul className="p-works__filter">
           <li className={activeCategory === '' ? 'p-works__filter-item is-active' : 'p-works__filter-item'}>
-            <button className="p-works__filter-btn" onClick={()=>setActiveCategory('')}>ALL</button>
+            <button className="p-works__filter-btn" onClick={()=>setActiveCategory('')}>All</button>
           </li>
           {category.map((item) => (
             <li className={activeCategory === item.slug ? 'p-works__filter-item is-active' : 'p-works__filter-item'} key={item.id}>
