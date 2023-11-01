@@ -74,7 +74,9 @@ export default function BlogId({ works, prev, next }: Props) {
         <section className="p-article">
           <div className="l-inner-column">
             <div className={`p-article__screenshot${screenshotRatio >= 2 ? ' is-omission' : ''}`}>
-              <Image src={works.screenshot.url} alt="" width={works.screenshot.width} height={works.screenshot.height} className="p-article__screenshot-img" />
+              <div className="p-article__screenshot-wrap">
+                <Image src={works.screenshot.url} alt="" width={works.screenshot.width} height={works.screenshot.height} className="p-article__screenshot-img" />
+              </div>
             </div>
             <div className="p-article__contents">
               <section className="p-article__contents-wrap">

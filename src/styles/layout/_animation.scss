@@ -39,23 +39,22 @@
 
 @keyframes mouseWheel {
   0% {
-      transform: translate(-50%, 0);
-      opacity: 0
-    }
+    transform: translate(-50%, 0);
+    opacity: 0
+  }
 
-    40% {
-      opacity: 1
-    }
+  40% {
+    opacity: 1
+  }
 
-    80% {
-      -webkit-transform: translate(-50%, 20px);
-      transform: translate(-50%, 20px);
-      opacity: 0
-    }
+  80% {
+    transform: translate(-50%, 20px);
+    opacity: 0
+  }
 
-    100% {
-      opacity: 0
-    }
+  100% {
+    opacity: 0
+  }
 }
 
 @keyframes touchWheel {
@@ -83,6 +82,16 @@
 @keyframes fadeinUpText {
   from { transform: translateY(100%); }
   to { transform: translateY(0); }
+}
+
+@keyframes skeletonScreen {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 .js-fadeinup-small { opacity: 0; transform: translateY(20px);
