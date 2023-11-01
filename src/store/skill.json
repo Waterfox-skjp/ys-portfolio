@@ -128,38 +128,50 @@
     },
     {
       "id": 21,
+      "name": "XAMPP",
+      "src": "/images/icon/icon-xampp.svg",
+      "itemclass": ""
+    },
+    {
+      "id": 22,
       "name": "Vagrant",
       "src": "/images/icon/icon-vagrant.svg",
       "itemclass": ""
     },
     {
-      "id": 22,
+      "id": 23,
       "name": "Firebase",
       "src": "/images/icon/icon-firebase.png",
       "itemclass": ""
     },
     {
-      "id": 23,
+      "id": 24,
       "name": "Linux",
       "src": "/images/icon/icon-linux.png",
       "itemclass": ""
     },
     {
-      "id": 24,
+      "id": 25,
       "name": "Photoshop",
       "src": "/images/icon/icon-photoshop.svg",
       "itemclass": ""
     },
     {
-      "id": 25,
+      "id": 26,
       "name": "Figma",
       "src": "/images/icon/icon-figma.svg",
       "itemclass": ""
     },
     {
-      "id": 26,
+      "id": 27,
       "name": "Backlog",
       "src": "/images/icon/icon-backlog.svg",
+      "itemclass": ""
+    },
+    {
+      "id": 28,
+      "name": "Google Analytics",
+      "src": "/images/icon/icon-google-analytics.svg",
       "itemclass": ""
     }
   ]
