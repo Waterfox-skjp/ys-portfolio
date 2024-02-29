@@ -115,7 +115,7 @@
 
   .p-article { padding: g.px(120) 0;
     &__screenshot { margin: 0 0 g.px(120,670);
-      &-wrap { position: static; }
+      &-wrap { position: relative; top: auto; left: auto; }
       &.is-omission {
         &::after {
           display: block;
