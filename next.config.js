@@ -22,6 +22,9 @@ const nextConfig = {
     locales: ['ja'],
     defaultLocale: 'ja',
   },
+  experimental: {
+    scrollRestoration: true,
+  },
 }
 
 module.exports = nextConfig
