@@ -102,7 +102,7 @@ export default function Home( { works, category } : Props ) {
                 <Image src="/images/img-portrait.webp" alt="" width="250" height="250" className="p-about__visual-img" />
               </div>
               <div className="p-about__contents">
-                <p className="p-about__contents-text">千葉県松戸市在住の26歳。学生時代から趣味でWeb制作をしており、独学でHTML、CSS、JavaScriptを習得。また、Web制作会社で勤務していた経験からCSSアニメーションやJavaScriptを用いた“動き”のあるサイトの他、Core Web VitalsやセマンティックコーディングといったSEOに直結する分野においても多くの知見を持つ。<br />最近はNext.jsやNuxt.jsといったモダンな開発にも積極的に挑戦。</p>
+                <p className="p-about__contents-text">千葉県松戸市在住の27歳。学生時代から趣味でWeb制作をしており、独学でHTML、CSS、JavaScriptを習得。また、Web制作会社で勤務していた経験からCSSアニメーションやJavaScriptを用いた“動き”のあるサイトの他、Core Web VitalsやセマンティックコーディングといったSEOに直結する分野においても多くの知見を持つ。<br />最近はNext.jsやNuxt.jsといったモダンな開発にも積極的に挑戦。</p>
                 <dl className="p-about__contents-list">
                   <dt>趣味</dt>
                   <dd>ツーリング、ドライブ、カメラ、スノーボード</dd>
