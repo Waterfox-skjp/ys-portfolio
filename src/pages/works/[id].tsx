@@ -101,7 +101,7 @@ export default function BlogId({ works, prev, next }: Props) {
                 <p className="p-article__contents-text">{works.production_time}</p>
               </section>
               <section className="p-article__contents-wrap">
-                <h2 className="p-article__contents-heading">使用フレームワークなど</h2>
+                <h2 className="p-article__contents-heading">使用技術など</h2>
                 <UseFramework useFramework ={works.used_framework} />
               </section>
             </div>
