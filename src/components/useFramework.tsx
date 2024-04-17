@@ -43,11 +43,11 @@ export default function useFramework( { useFramework } : Props ) {
                 data-tooltip-id="fw-tooltip"
                 data-tooltip-content={value.name}
                 data-tooltip-place="bottom" />
-              <Tooltip id="fw-tooltip" />
             </li>
           )
         })}
       </ul>
+      <Tooltip id="fw-tooltip" />
     </>
   )
 }
