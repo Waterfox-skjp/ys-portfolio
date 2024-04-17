@@ -1,5 +1,10 @@
 import Image from 'next/image'
 import frameworkData from '@/store/framework.json'
+import dynamic from 'next/dynamic'
+
+const Tooltip = dynamic(() =>
+  import('react-tooltip').then((res) => res.Tooltip)
+)
 
 type Props = {
   useFramework: string[]
@@ -30,7 +35,15 @@ export default function useFramework( { useFramework } : Props ) {
         {useFrameworkSort.map((value) => {
           return (
             <li key={value.id}>
-              <Image src={value.src} alt={value.name} width="50" height="50" />
+              <Image
+                src={value.src}
+                alt=""
+                width="50"
+                height="50"
+                data-tooltip-id="fw-tooltip"
+                data-tooltip-content={value.name}
+                data-tooltip-place="bottom" />
+              <Tooltip id="fw-tooltip" />
             </li>
           )
         })}
